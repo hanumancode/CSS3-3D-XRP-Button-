@@ -1,11 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background: #000;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     align-items: center;
+    min-height: 100vh;
+    background: #fff;
 }
 
 a {
@@ -13,6 +13,7 @@ a {
     width: 150px;
     height: 50px;
     transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg);
     transition: 4.0s;
 }
 
@@ -37,7 +38,27 @@ a span {
     box-shadow: inset 0 20px 50px rgb(0,0,0,0.2);
 }
 
+a:hover {
+    transform: perspective(1000px) rotateX(360deg);
+}
+
 a:hover span {
     color: #fff;
     background: rgba(2, 124, 181, 0.7);
+}
+
+a span:nth-child(1) {
+    transform: rotateX(360deg) translateZ(25px);
+}
+
+a span:nth-child(2) {
+    transform: rotateX(270deg) translateZ(25px);
+}
+
+a span:nth-child(3) {
+    transform: rotateX(180deg) translateZ(25px);
+}
+
+a span:nth-child(4) {
+    transform: rotateX(90deg) translateZ(25px);
 }
